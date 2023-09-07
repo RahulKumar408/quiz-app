@@ -1,0 +1,6 @@
+flask
+flask-mysqldb
+flask-wtf
+pyyaml
+flask-mail
+nexmo

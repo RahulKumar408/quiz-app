@@ -1,0 +1,53 @@
+
+
+
+{% extends 'base.html' %}
+
+    
+{% block title %}
+Verify OTP
+{% endblock %}
+
+{% block body %}
+{% with messages = get_flashed_messages() %} {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <div>{{ message }}</div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+{% endif %} {% endwith %}
+<div class="container mt-5 align-middle">
+  <div class="row ">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header text-center ">
+          <h4>Verify OTP</h4>
+        </div>
+        <div class="card-body">
+          <form class="needs-validation" action"/verify-otp" method="POST">
+          
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">OTP</span>
+                <input type="number" class="form-control" id="otp" name="otp" placeholder="Enter OTP" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+            <div class="text-center mt-3">
+              <button type="submit" class="btn btn-dark" value="register">
+                Verify
+              </button>
+            </div>
+
+          </form>
+        </div>
+        <div class="card-footer text-muted text-center">
+          Provide the OTP received at your phone or email. 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+

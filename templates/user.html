@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+  QUIZZING | User
+{% endblock %}
+
+{% block body %}
+<div class="text-center" style="font-size: 50px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+   Welcome {{var}}
+</div>
+<hr>
+<div class="container-fluid text-center">
+  <div class="text-center mtoset">
+    <a href="/userquiz" type="button" class="btn btn-secondary userbtnwidth">Start Quiz</a>
+  </div>
+  <div class="text-center mt-5">
+    <a type="button" class="btn btn-secondary userbtnwidth">Feedback</a>
+  </div>
+  <div class="text-center mt-5">
+    <a href="/contact"type="button" class="btn btn-secondary userbtnwidth">Contact Us</a>  
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block navbar%}
+<nav class="navbar bg-transparent mb-3">
+  <div class="container-fluid justify-content-end">
+    <button class="btn btn-outline-light btnwidth" type="submit">Log Out</button>
+  </div>
+</nav>
+{% endblock %}

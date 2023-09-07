@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Admin 
+{% endblock %}
+
+{% block body %}
+
+<div class="mt-5 text-white" >
+       
+    <div style="font-size: 50px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+       Welcome Admin
+    </div>
+    <div class="font-lg" >
+        <hr>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was popularised
+        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.
+     </div>
+    <div class="mt-5" >
+        <a href="/login"  class="btn btn-light">Add Qeustion</a>
+        <a herf="/register"  class="btn btn-light  mx-2">See Answer</a>
+        <a herf="/register"  class="btn btn-light ">See All Quizes</a>
+        <div >
+          </div>
+          <div >
+          </div>
+     </div>
+
+ </div>
+
+{% endblock %}
+
+
+{% block navbar%}
+<nav class="navbar bg-transparatn mt-2">
+    <div class="container-fluid justify-content-end">
+        <a herf="/home"  class="btn btnwidth btn-outline-light">Log Out</a>
+    </div>
+  </nav>
+{% endblock %}

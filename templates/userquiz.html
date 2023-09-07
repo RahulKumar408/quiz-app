@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}
+  QUIZZING | User | Quiz
+{% endblock %}
+
+{% block body %}
+
+  
+
+  <div class="container mt-5 ">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-6 text-right fs-4">
+                <p>Question <span id="current-question" value="">1</span> / <span id="total-questions">{{ totalQuestion }}</span></p>
+              </div>
+              <div class="col-md-6">
+                <p class="fs-4">Time Remaining: <span id="time">10:00</span></p>
+              </div>
+            </div>
+          </div>
+          {% for question in questions %}
+          <div class="card-body question-card" id="question-{{ loop.index }}" data-selected-option="">
+            <p id="question-text">{{ question.question_text }}</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="option{{ loop.index}}" id="a_option{{ loop.index }}" value="{{ question.option1 }}">
+              <label class="form-check-label" for="option{{ loop.index }}" id="option{{ loop.index }}-label">
+                {{ question.option1 }}
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="option{{ loop.index}}" id="b_option{{ loop.index }}" value="{{ question.option2 }}">
+              <label class="form-check-label" for="option{{ loop.index }}" id="option{{ loop.index }}-label">
+                {{ question.option2 }}
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="option{{ loop.index}}" id="c_option{{ loop.index }}" value="{{ question.option3 }}">
+              <label class="form-check-label" for="option{{ loop.index }}" id="option{{ loop.index }}-label">
+                {{ question.option3 }}
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="option{{ loop.index}}" id="d_option{{ loop.index }}" value="{{ question.option4 }}">
+              <label class="form-check-label" for="option{{ loop.index }}" id="option{{ loop.index }}-label">
+                {{ question.option4 }}
+              </label>
+            </div>
+          </div>
+          {% endfor %}
+          <div class="card-footer ">
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <button class="btn btn-secondary btnwidth mb-2" id="previous-btn">Previous</button>
+              </div>
+              <div class="col-md-6 text-right">
+                <button class="btn btn-primary btnwidth" id="next-btn">Next</button>
+              </div>
+            </div>
+            <div class="row mt-3"> 
+              <div class="col-md
+              12 text-center">
+              <button class="btn btn-success btnwidth" id="submit-btn" disabled>Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var totalQuestion = {{totalQuestion}};
+</script>
+  <script src="../static/js/userquiz.js"></script>
+
+
+
+{% endblock %}
+
+
+{% block navbar%}
+<nav class="navbar bg-transparent mb-3">
+<div class="container-fluid justify-content-end">
+  <button class="btn btn-outline-light btnwidth" type="submit">Log Out</button>
+</div>
+</nav>
+{% endblock %}

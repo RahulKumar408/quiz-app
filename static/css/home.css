@@ -1,0 +1,38 @@
+body{
+    background: rgb(255,255,255);
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(180,103,26,1) 53%); */
+    
+    background-image: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,124,42,1) 26%);
+    height: 100vh;
+    content: cover;
+    background-repeat: no-repeat;
+}
+
+.btnwidth {
+    width: 100px;
+}
+.userbtnwidth {
+    width: 40vh;
+}
+
+.imgbulb{
+    width: 50vh;
+}
+.fontcur{
+    font-family: cursive;
+}
+.fontcapital{
+   text-transform: uppercase;
+}
+
+.bgset{    
+    background-color: red;
+}
+.mtoset{
+    margin-top: 100px;
+}
+
+.question-card:not(:first-of-type) {
+    display: none;
+  }
+  

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, white 20%, brown 100%);
+  }
+</style>
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block body %}
+  <div class="container d-flex justify-content-center align-items-center flex-column">
+    <div class="mt-5 text-white">
+      <h2 class="fontcur my-2">In search of creative mind</h2>
+      <h1 class="fontcapital">Organizaiton name</h1>
+    </div>
+    <div class="">
+      <img src="../static/img/homebulb.png" class="imgbulb" alt="...">
+    </div>
+    <div >
+      <a href="/login"  class="btn btn-light my-1 btnwidth">Login</a>
+    </div>
+    <div >
+      <a href="/register"  class="btn btn-light btnwidth">Register</a>
+    </div>
+  </div>
+
+
+{% endblock %}
+
+{% block navbar%}
+  <div></div>
+{% endblock %}
